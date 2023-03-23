@@ -4,3 +4,4 @@ ${driver}=  chrome
 ${typeofinsurance}=  //button[@class='c-header-dropdown__toggle']
 ${personalbutton}=  (//a[@role='menuitem'])[1]
 ${businessbutton}=  (//a[@role='menuitem'])[2]
+${typeofinsurancebtn}=  class:c-header-dropdown__toggle
