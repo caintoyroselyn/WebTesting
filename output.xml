@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230323 10:41:53.227" rpa="false" schemaversion="3">
+<suite id="s1" name="ExcelTest" source="/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases/ExcelTest.robot">
+<test id="s1-t1" name="Check created excel doc" line="7">
+<kw name="Read Excel">
+<var>${username}</var>
+<arg>/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases${/}../resources/data.xlsx</arg>
+<arg>Sheet1</arg>
+<arg>2</arg>
+<arg>1</arg>
+<kw name="Open Excel Document" library="ExcelLibrary">
+<arg>${filepath}</arg>
+<arg>1</arg>
+<doc>Opens xlsx document file.</doc>
+<status status="PASS" starttime="20230323 10:41:53.360" endtime="20230323 10:41:53.362"/>
+</kw>
+<kw name="Get Sheet" library="ExcelLibrary">
+<arg>${sheetname}</arg>
+<doc>Returns a page from the current document.</doc>
+<status status="PASS" starttime="20230323 10:41:53.362" endtime="20230323 10:41:53.363"/>
+</kw>
+<kw name="Read Excel Cell" library="ExcelLibrary">
+<var>${data}</var>
+<arg>${rownum}</arg>
+<arg>${colnum}</arg>
+<doc>Returns content of a cell.</doc>
+<msg timestamp="20230323 10:41:53.363" level="INFO">${data} = username1</msg>
+<status status="PASS" starttime="20230323 10:41:53.363" endtime="20230323 10:41:53.363"/>
+</kw>
+<kw name="Close Current Excel Document" library="ExcelLibrary">
+<doc>Closes current document.</doc>
+<status status="PASS" starttime="20230323 10:41:53.363" endtime="20230323 10:41:53.363"/>
+</kw>
+<msg timestamp="20230323 10:41:53.363" level="INFO">${username} = username1</msg>
+<status status="PASS" starttime="20230323 10:41:53.360" endtime="20230323 10:41:53.363"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${username}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230323 10:41:53.363" endtime="20230323 10:41:53.363"/>
+</kw>
+<status status="PASS" starttime="20230323 10:41:53.360" endtime="20230323 10:41:53.363"/>
+</test>
+<status status="PASS" starttime="20230323 10:41:53.228" endtime="20230323 10:41:53.363"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="ExcelTest">ExcelTest</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230323 10:41:53.354" level="ERROR">Error in file '/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases/ExcelTest.robot' on line 4: Invalid resource file extension '.xlsx'. Supported extensions are '.resource', '.robot', '.txt', '.tsv', '.rst' and '.rest'.</msg>
+</errors>
+</robot>
