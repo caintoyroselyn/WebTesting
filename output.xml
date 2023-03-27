@@ -1,91 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230323 21:45:25.812" rpa="false" schemaversion="3">
-<suite id="s1" name="DropdownandListTest" source="/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases/DropdownandListTest.robot">
-<test id="s1-t1" name="How to open brower" line="7">
+<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230327 16:58:31.725" rpa="false" schemaversion="3">
+<suite id="s1" name="BrowserRelatedKeyword" source="/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases/BrowserRelatedKeyword.robot">
+<test id="s1-t1" name="Browser Related Keyword Testing" line="12">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm</arg>
-<arg>chrome</arg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230323 21:45:25.904" level="INFO">Opening browser 'chrome' to base url 'https://www.tutorialspoint.com/selenium/selenium_automation_practice.htm'.</msg>
-<status status="PASS" starttime="20230323 21:45:25.904" endtime="20230323 21:46:54.791"/>
+<msg timestamp="20230327 16:58:31.807" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Windows.html'.</msg>
+<status status="PASS" starttime="20230327 16:58:31.806" endtime="20230327 16:58:56.573"/>
 </kw>
-<doc>Add your chrome driver in your environment varibles</doc>
-<status status="PASS" starttime="20230323 21:45:25.903" endtime="20230323 21:46:54.792"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230327 16:58:56.573" endtime="20230327 16:58:57.068"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>2 seconds</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20230327 16:58:57.068" endtime="20230327 16:58:57.069"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${nextwindowbtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230327 16:58:57.071" level="INFO">Clicking button '(//button[@class="btn btn-info"])[1]'.</msg>
+<status status="PASS" starttime="20230327 16:58:57.069" endtime="20230327 16:59:07.633"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>title=Selenium</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230327 16:59:07.633" endtime="20230327 16:59:33.930"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${downloads}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20230327 16:59:33.933" level="INFO">Clicking link '(//a[@class="nav-link"])[1]'.</msg>
+<status status="PASS" starttime="20230327 16:59:33.930" endtime="20230327 16:59:41.632"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230327 16:59:41.633" level="INFO">Opening url 'https://demo.automationtesting.in/Windows.html'</msg>
+<status status="PASS" starttime="20230327 16:59:41.633" endtime="20230327 17:00:54.628"/>
+</kw>
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<status status="PASS" starttime="20230327 17:00:54.631" endtime="20230327 17:00:56.670"/>
+</kw>
+<status status="PASS" starttime="20230327 16:58:31.806" endtime="20230327 17:00:56.672"/>
 </test>
-<test id="s1-t2" name="How to verify checklist/list" line="11">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.scrollTo(0,300)</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20230323 21:46:54.794" level="INFO">Executing JavaScript:
-window.scrollTo(0,300)
-Without any arguments.</msg>
-<status status="PASS" starttime="20230323 21:46:54.793" endtime="20230323 21:46:54.815"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230323 21:46:59.817" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230323 21:46:54.815" endtime="20230323 21:46:59.818"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>${continents}</arg>
-<arg>1</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20230323 21:46:59.821" level="INFO">Selecting options from selection list '//select[@name="continents"]' by index 1.</msg>
-<status status="PASS" starttime="20230323 21:46:59.819" endtime="20230323 21:47:00.217"/>
-</kw>
-<kw name="Get List Items" library="SeleniumLibrary">
-<var>${list}</var>
-<arg>${continents}</arg>
-<doc>Returns all labels or values of selection list ``locator``.</doc>
-<msg timestamp="20230323 21:47:00.312" level="INFO">${list} = ['Asia', 'Europe', 'Africa', 'Australia', 'South America', 'North America', 'Antartica']</msg>
-<status status="PASS" starttime="20230323 21:47:00.217" endtime="20230323 21:47:00.312"/>
-</kw>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${list}</arg>
-<arg>Europe</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230323 21:47:00.312" endtime="20230323 21:47:00.313"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>${selcommandlist}</arg>
-<arg>1</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20230323 21:47:00.313" level="INFO">Selecting options from selection list '//select[@name="selenium_commands"]' by index 1.</msg>
-<status status="PASS" starttime="20230323 21:47:00.313" endtime="20230323 21:47:00.386"/>
-</kw>
-<kw name="Get List Items" library="SeleniumLibrary">
-<var>${sellist}</var>
-<arg>${selcommandlist}</arg>
-<doc>Returns all labels or values of selection list ``locator``.</doc>
-<msg timestamp="20230323 21:47:00.437" level="INFO">${sellist} = ['Browser Commands', 'Navigation Commands', 'Switch Commands', 'Wait Commands', 'WebElement Commands']</msg>
-<status status="PASS" starttime="20230323 21:47:00.386" endtime="20230323 21:47:00.437"/>
-</kw>
-<kw name="Should Contain" library="BuiltIn">
-<arg>${sellist}</arg>
-<arg>Browser Commands</arg>
-<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
-<status status="PASS" starttime="20230323 21:47:00.437" endtime="20230323 21:47:00.437"/>
-</kw>
-<kw name="Unselect From List By Index" library="SeleniumLibrary">
-<arg>${selcommandlist}</arg>
-<arg>1</arg>
-<doc>Unselects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20230323 21:47:00.437" level="INFO">Un-selecting options from selection list '//select[@name="selenium_commands"]' by index 1.</msg>
-<status status="PASS" starttime="20230323 21:47:00.437" endtime="20230323 21:47:00.536"/>
-</kw>
-<status status="PASS" starttime="20230323 21:46:54.792" endtime="20230323 21:47:00.537"/>
-</test>
-<status status="PASS" starttime="20230323 21:45:25.813" endtime="20230323 21:47:00.537"/>
+<status status="PASS" starttime="20230327 16:58:31.726" endtime="20230327 17:00:56.675"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="0" skip="0" id="s1" name="DropdownandListTest">DropdownandListTest</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="BrowserRelatedKeyword">BrowserRelatedKeyword</stat>
 </suite>
 </statistics>
 <errors>
