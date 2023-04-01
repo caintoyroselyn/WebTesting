@@ -1,62 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230327 16:58:31.725" rpa="false" schemaversion="3">
-<suite id="s1" name="BrowserRelatedKeyword" source="/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases/BrowserRelatedKeyword.robot">
-<test id="s1-t1" name="Browser Related Keyword Testing" line="12">
+<robot generator="Robot 6.0.2 (Python 3.9.6 on darwin)" generated="20230328 16:24:15.587" rpa="false" schemaversion="3">
+<suite id="s1" name="MouseAction" source="/Users/roselyncaintoy/PycharmProjects/WebTesting/testcases/MouseAction.robot">
+<test id="s1-t1" name="Mouse Action - Right Click" line="12">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230327 16:58:31.807" level="INFO">Opening browser 'chrome' to base url 'https://demo.automationtesting.in/Windows.html'.</msg>
-<status status="PASS" starttime="20230327 16:58:31.806" endtime="20230327 16:58:56.573"/>
+<msg timestamp="20230328 16:24:15.681" level="INFO">Opening browser 'chrome' to base url 'https://swisnl.github.io/jQuery-contextMenu/demo.html'.</msg>
+<status status="PASS" starttime="20230328 16:24:15.680" endtime="20230328 16:24:27.961"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230327 16:58:56.573" endtime="20230327 16:58:57.068"/>
+<status status="PASS" starttime="20230328 16:24:27.961" endtime="20230328 16:24:28.376"/>
 </kw>
-<kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>2 seconds</arg>
-<doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20230327 16:58:57.068" endtime="20230327 16:58:57.069"/>
+<kw name="Open Context Menu" library="SeleniumLibrary">
+<arg>${opencontexmenu}</arg>
+<doc>Opens the context menu on the element identified by ``locator``.</doc>
+<status status="PASS" starttime="20230328 16:24:28.376" endtime="20230328 16:24:28.893"/>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>${nextwindowbtn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230327 16:58:57.071" level="INFO">Clicking button '(//button[@class="btn btn-info"])[1]'.</msg>
-<status status="PASS" starttime="20230327 16:58:57.069" endtime="20230327 16:59:07.633"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230328 16:24:31.894" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230328 16:24:28.893" endtime="20230328 16:24:31.895"/>
 </kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>title=Selenium</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20230327 16:59:07.633" endtime="20230327 16:59:33.930"/>
-</kw>
-<kw name="Click Link" library="SeleniumLibrary">
-<arg>${downloads}</arg>
-<doc>Clicks a link identified by ``locator``.</doc>
-<msg timestamp="20230327 16:59:33.933" level="INFO">Clicking link '(//a[@class="nav-link"])[1]'.</msg>
-<status status="PASS" starttime="20230327 16:59:33.930" endtime="20230327 16:59:41.632"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${URL}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20230327 16:59:41.633" level="INFO">Opening url 'https://demo.automationtesting.in/Windows.html'</msg>
-<status status="PASS" starttime="20230327 16:59:41.633" endtime="20230327 17:00:54.628"/>
-</kw>
-<kw name="Go Back" library="SeleniumLibrary">
-<doc>Simulates the user clicking the back button on their browser.</doc>
-<status status="PASS" starttime="20230327 17:00:54.631" endtime="20230327 17:00:56.670"/>
-</kw>
-<status status="PASS" starttime="20230327 16:58:31.806" endtime="20230327 17:00:56.672"/>
+<status status="PASS" starttime="20230328 16:24:15.680" endtime="20230328 16:24:31.896"/>
 </test>
-<status status="PASS" starttime="20230327 16:58:31.726" endtime="20230327 17:00:56.675"/>
+<test id="s1-t2" name="Mouse Action - Double Click" line="18">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://testautomationpractice.blogspot.com</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230328 16:24:31.899" level="INFO">Opening url 'https://testautomationpractice.blogspot.com'</msg>
+<status status="PASS" starttime="20230328 16:24:31.898" endtime="20230328 16:24:37.205"/>
+</kw>
+<kw name="Double Click Element" library="SeleniumLibrary">
+<arg>${doubleclick}</arg>
+<doc>Double clicks the element identified by ``locator``.</doc>
+<msg timestamp="20230328 16:24:37.206" level="INFO">Double clicking element '//button[@ondblclick="myFunction1()"]'.</msg>
+<status status="PASS" starttime="20230328 16:24:37.206" endtime="20230328 16:24:37.713"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230328 16:24:40.715" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230328 16:24:37.713" endtime="20230328 16:24:40.716"/>
+</kw>
+<status status="PASS" starttime="20230328 16:24:31.897" endtime="20230328 16:24:40.717"/>
+</test>
+<test id="s1-t3" name="Mouse Action - Drag and Drop" line="24">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230328 16:24:40.719" level="INFO">Opening url 'http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html'</msg>
+<status status="PASS" starttime="20230328 16:24:40.719" endtime="20230328 16:24:43.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230328 16:24:46.270" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230328 16:24:43.269" endtime="20230328 16:24:46.270"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//iframe[@id="google_esf"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230328 16:24:46.271" level="INFO">Selecting frame '//iframe[@id="google_esf"]'.</msg>
+<status status="PASS" starttime="20230328 16:24:46.270" endtime="20230328 16:24:46.352"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230328 16:24:49.354" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230328 16:24:46.353" endtime="20230328 16:24:49.354"/>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20230328 16:24:49.354" endtime="20230328 16:24:49.613"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230328 16:24:52.614" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230328 16:24:49.613" endtime="20230328 16:24:52.614"/>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>//div[@id="dropContent"]</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230328 16:24:52.614" level="INFO">Selecting frame '//div[@id="dropContent"]'.</msg>
+<msg timestamp="20230328 16:24:52.945" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-48.png"&gt;&lt;img src="selenium-screenshot-48.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230328 16:24:52.946" level="FAIL">NoSuchFrameException: Message: no such frame
+  (Session info: chrome=111.0.5563.146)
+Stacktrace:
+0   chromedriver                        0x0000000104fe2428 chromedriver + 4899880
+1   chromedriver                        0x0000000104f5fa23 chromedriver + 4364835
+2   chromedriver                        0x0000000104ba9a71 chromedriver + 473713
+3   chromedriver                        0x0000000104baed4b chromedriver + 494923
+4   chromedriver                        0x0000000104c30c47 chromedriver + 1027143
+5   chromedriver                        0x0000000104c13562 chromedriver + 906594
+6   chromedriver                        0x0000000104c2eb5b chromedriver + 1018715
+7   chromedriver                        0x0000000104c13333 chromedriver + 906035
+8   chromedriver                        0x0000000104bdd55f chromedriver + 685407
+9   chromedriver                        0x0000000104bdea7e chromedriver + 690814
+10  chromedriver                        0x0000000104faf79e chromedriver + 4691870
+11  chromedriver                        0x0000000104fb4961 chromedriver + 4712801
+12  chromedriver                        0x0000000104fbb2ff chromedriver + 4739839
+13  chromedriver                        0x0000000104fb585a chromedriver + 4716634
+14  chromedriver                        0x0000000104f87fce chromedriver + 4530126
+15  chromedriver                        0x0000000104fd55c8 chromedriver + 4847048
+16  chromedriver                        0x0000000104fd5747 chromedriver + 4847431
+17  chromedriver                        0x0000000104fea87f chromedriver + 4933759
+18  libsystem_pthread.dylib             0x00007ff814bb14e1 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff814bacf6b thread_start + 15
+</msg>
+<status status="FAIL" starttime="20230328 16:24:52.614" endtime="20230328 16:24:52.953"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${dragelement}</arg>
+<arg>${dropelement}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="NOT RUN" starttime="20230328 16:24:52.953" endtime="20230328 16:24:52.953"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3 seconds</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230328 16:24:52.953" endtime="20230328 16:24:52.953"/>
+</kw>
+<status status="FAIL" starttime="20230328 16:24:40.718" endtime="20230328 16:24:52.953">NoSuchFrameException: Message: no such frame
+  (Session info: chrome=111.0.5563.146)
+Stacktrace:
+0   chromedriver                        0x0000000104fe2428 chromedriver + 4899880
+1   chromedriver                        0x0000000104f5fa23 chromedriver + 4364835
+2   chromedriver                        0x0000000104ba9a71 chromedriver + 473713
+3   chromedriver                        0x0000000104baed4b chromedriver + 494923
+4   chromedriver                        0x0000000104c30c47 chromedriver + 1027143
+5   chromedriver                        0x0000000104c13562 chromedriver + 906594
+6   chromedriver                        0x0000000104c2eb5b chromedriver + 1018715
+7   chromedriver                        0x0000000104c13333 chromedriver + 906035
+8   chromedriver                        0x0000000104bdd55f chromedriver + 6...
+    [ Message content over the limit has been removed. ]
+...hromedriver                        0x0000000104bdea7e chromedriver + 690814
+10  chromedriver                        0x0000000104faf79e chromedriver + 4691870
+11  chromedriver                        0x0000000104fb4961 chromedriver + 4712801
+12  chromedriver                        0x0000000104fbb2ff chromedriver + 4739839
+13  chromedriver                        0x0000000104fb585a chromedriver + 4716634
+14  chromedriver                        0x0000000104f87fce chromedriver + 4530126
+15  chromedriver                        0x0000000104fd55c8 chromedriver + 4847048
+16  chromedriver                        0x0000000104fd5747 chromedriver + 4847431
+17  chromedriver                        0x0000000104fea87f chromedriver + 4933759
+18  libsystem_pthread.dylib             0x00007ff814bb14e1 _pthread_start + 125
+19  libsystem_pthread.dylib             0x00007ff814bacf6b thread_start + 15</status>
+</test>
+<status status="FAIL" starttime="20230328 16:24:15.588" endtime="20230328 16:24:52.954"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="2" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="BrowserRelatedKeyword">BrowserRelatedKeyword</stat>
+<stat pass="2" fail="1" skip="0" id="s1" name="MouseAction">MouseAction</stat>
 </suite>
 </statistics>
 <errors>
